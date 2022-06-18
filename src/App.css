@@ -1,0 +1,53 @@
+:where(img) {
+  max-width: 100%;
+}
+
+:where(.container) {
+  max-width: 800px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: darkslateblue;
+  padding: 0 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:where(.innerContainer) {
+  position: relative;
+  width: 100%;
+}
+
+:where(.carouselSlideList) {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  gap: 10px;
+  overflow-x: hidden;
+  /* display: flex; */
+  /* /* gap: 10px; */ */
+  /* overflow-x: auto; */
+  /* overflow-y: hidden; */
+  /* -webkit-overflow-scrolling: touch; */
+  /* -ms-overflow-style: none; */
+  /* scrollbar-width: none; */
+}
+
+:where(.carouselSlideList) > * {
+  /* flex-shrink: 0; */
+  /* width: 100%; */
+  height: 100px;
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:where(.carouselSlideList) > * + * {
+  /* margin-left: 30px; */
+}
+
+:where(.carouselSlideList)::-webkit-scrollbar {
+  display: none;
+}
